@@ -1,4 +1,4 @@
-# Cahier des charges · Infographie institutionnelle
+# Référentiel · Infographie institutionnelle
 
 **Référentiel consolidé — Communication institutionnelle**  
 Synthèse technique et conceptuelle — Format standard A4 / Web  
