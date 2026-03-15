@@ -166,9 +166,7 @@ a{color:var(--blue)}
   .fmts-wrap{padding:0 16px 24px}
 }
 @media(max-width:720px){
-  .sep{width:12px;min-width:12px;max-width:12px}
-}
-  .sep{width:10px}
+  .sep{width:10px;min-width:10px;max-width:10px}
   .hdr-actions .icon-btn:last-child{display:none}
 }
 @media(max-width:600px){
@@ -554,27 +552,27 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
 <!-- STEPPER -->
 <header class="stepper">
   <div class="steps">
-    <div class="stp active" data-step="1" onclick="goTo(1)">
+    <div class="stp active" data-step="1" onclick="goTo(1)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goTo(1)}">
       <div class="stp-n">1</div><div class="stp-l">Mon objectif</div>
     </div>
     <div class="sep"></div>
-    <div class="stp disabled" data-step="2" onclick="goTo(2)">
+    <div class="stp disabled" data-step="2" onclick="goTo(2)" role="button" tabindex="-1" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goTo(2)}">
       <div class="stp-n">2</div><div class="stp-l">Mon format</div>
     </div>
     <div class="sep"></div>
-    <div class="stp disabled" data-step="3" onclick="goTo(3)">
+    <div class="stp disabled" data-step="3" onclick="goTo(3)" role="button" tabindex="-1" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goTo(3)}">
       <div class="stp-n">3</div><div class="stp-l">Ma mise en page</div>
     </div>
     <div class="sep"></div>
-    <div class="stp disabled" data-step="4" onclick="goTo(4)">
+    <div class="stp disabled" data-step="4" onclick="goTo(4)" role="button" tabindex="-1" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goTo(4)}">
       <div class="stp-n">4</div><div class="stp-l">Ma charte</div>
     </div>
     <div class="sep"></div>
-    <div class="stp disabled" data-step="5" onclick="goTo(5)">
+    <div class="stp disabled" data-step="5" onclick="goTo(5)" role="button" tabindex="-1" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goTo(5)}">
       <div class="stp-n">5</div><div class="stp-l">Mon contenu</div>
     </div>
     <div class="sep"></div>
-    <div class="stp disabled" data-step="6" onclick="goTo(6)">
+    <div class="stp disabled" data-step="6" onclick="goTo(6)" role="button" tabindex="-1" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goTo(6)}">
       <div class="stp-n">6</div><div class="stp-l">Exporter</div>
     </div>
   </div>
@@ -614,7 +612,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
 
   <div class="obj-grid" id="obj-grid" role="radiogroup" aria-label="Contexte de diffusion">
 
-    <button class="obj-card" data-obj="impression" onclick="selObj(this)" aria-pressed="false" role="radio" aria-label="Impression papier">
+    <button class="obj-card" data-obj="impression" onclick="selObj(this)" aria-checked="false" role="radio" aria-label="Impression papier">
       <div class="obj-chk"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></div>
       <div class="obj-ico" style="background:#EBF4FF">
         <svg viewBox="0 0 26 26" fill="none"><rect x="5" y="2" width="16" height="22" rx="2" fill="#185FA5" opacity=".15" stroke="#185FA5" stroke-width="1.5"/><line x1="9" y1="8" x2="17" y2="8" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="12" x2="17" y2="12" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="16" x2="14" y2="16" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/><path d="M2 22c0-1 1-2 2-2h18c1 0 2 1 2 2" stroke="#185FA5" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
@@ -624,7 +622,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
       <div class="obj-tags"><span class="badge bdg-b">A4</span><span class="badge bdg-b">A3</span><span class="badge bdg-b">A5</span></div>
     </button>
 
-    <button class="obj-card" data-obj="projection" onclick="selObj(this)" aria-pressed="false" role="radio" aria-label="Projection en réunion">
+    <button class="obj-card" data-obj="projection" onclick="selObj(this)" aria-checked="false" role="radio" aria-label="Projection en réunion">
       <div class="obj-chk"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></div>
       <div class="obj-ico" style="background:#FFF5E6">
         <svg viewBox="0 0 26 26" fill="none"><rect x="2" y="5" width="22" height="14" rx="2" fill="#BA7517" opacity=".12" stroke="#BA7517" stroke-width="1.5"/><line x1="13" y1="19" x2="13" y2="23" stroke="#BA7517" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="23" x2="17" y2="23" stroke="#BA7517" stroke-width="1.5" stroke-linecap="round"/><rect x="6" y="8" width="14" height="8" rx="1" fill="#BA7517" opacity=".18"/><circle cx="13" cy="12" r="2.2" fill="#BA7517" opacity=".5"/></svg>
@@ -634,7 +632,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
       <div class="obj-tags"><span class="badge bdg-a">16:9</span><span class="badge bdg-a">4:3</span><span class="badge bdg-a">16:10</span></div>
     </button>
 
-    <button class="obj-card" data-obj="reseaux" onclick="selObj(this)" aria-pressed="false" role="radio" aria-label="Réseaux sociaux">
+    <button class="obj-card" data-obj="reseaux" onclick="selObj(this)" aria-checked="false" role="radio" aria-label="Réseaux sociaux">
       <div class="obj-chk"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></div>
       <div class="obj-ico" style="background:#E6FAF3">
         <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="9.5" fill="#1A7A4A" opacity=".1" stroke="#1A7A4A" stroke-width="1.5"/><circle cx="8.5" cy="10.5" r="2.2" fill="#1A7A4A" opacity=".4"/><circle cx="17.5" cy="10.5" r="2.2" fill="#1A7A4A" opacity=".4"/><circle cx="13" cy="17" r="2.2" fill="#1A7A4A" opacity=".55"/><line x1="10.5" y1="11.5" x2="15.5" y2="11.5" stroke="#1A7A4A" stroke-width="1.2"/><line x1="9.5" y1="12.5" x2="12" y2="15.5" stroke="#1A7A4A" stroke-width="1.2"/><line x1="16.5" y1="12.5" x2="14" y2="15.5" stroke="#1A7A4A" stroke-width="1.2"/></svg>
@@ -644,7 +642,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
       <div class="obj-tags"><span class="badge bdg-g">Carré</span><span class="badge bdg-g">Vertical</span><span class="badge bdg-g">Carrousel</span></div>
     </button>
 
-    <button class="obj-card" data-obj="web" onclick="selObj(this)" aria-pressed="false" role="radio" aria-label="Site web">
+    <button class="obj-card" data-obj="web" onclick="selObj(this)" aria-checked="false" role="radio" aria-label="Site web">
       <div class="obj-chk"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></div>
       <div class="obj-ico" style="background:#EBF4FF">
         <svg viewBox="0 0 26 26" fill="none"><rect x="2" y="4" width="22" height="16" rx="2" fill="#185FA5" opacity=".1" stroke="#185FA5" stroke-width="1.5"/><line x1="2" y1="8" x2="24" y2="8" stroke="#185FA5" stroke-width="1.2"/><circle cx="5" cy="6" r=".9" fill="#185FA5"/><circle cx="8" cy="6" r=".9" fill="#185FA5"/><circle cx="11" cy="6" r=".9" fill="#185FA5"/><rect x="5" y="11" width="16" height="5.5" rx="1" fill="#185FA5" opacity=".15"/><line x1="7" y1="22" x2="19" y2="22" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="20" x2="13" y2="22" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -654,7 +652,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
       <div class="obj-tags"><span class="badge bdg-b">Web A4</span><span class="badge bdg-b">Aperçu lien</span></div>
     </button>
 
-    <button class="obj-card" data-obj="affichage" onclick="selObj(this)" aria-pressed="false" role="radio" aria-label="Affichage grand format">
+    <button class="obj-card" data-obj="affichage" onclick="selObj(this)" aria-checked="false" role="radio" aria-label="Affichage grand format">
       <div class="obj-chk"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></div>
       <div class="obj-ico" style="background:#FFF5E6">
         <svg viewBox="0 0 26 26" fill="none"><rect x="5" y="2" width="16" height="22" rx="1.5" fill="#BA7517" opacity=".1" stroke="#BA7517" stroke-width="1.5"/><line x1="5" y1="7" x2="21" y2="7" stroke="#BA7517" stroke-width="1.2"/><line x1="8" y1="10" x2="18" y2="10" stroke="#BA7517" stroke-width="1.5" stroke-linecap="round"/><rect x="8" y="12.5" width="10" height="7" rx="1" fill="#BA7517" opacity=".2"/><line x1="8" y1="21" x2="13" y2="21" stroke="#BA7517" stroke-width="1.2" stroke-linecap="round"/></svg>
@@ -664,7 +662,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
       <div class="obj-tags"><span class="badge bdg-a">A3 portrait</span><span class="badge bdg-a">A3 paysage</span></div>
     </button>
 
-    <button class="obj-card" data-obj="carrousel" onclick="selObj(this)" aria-pressed="false" role="radio" aria-label="Carrousel">
+    <button class="obj-card" data-obj="carrousel" onclick="selObj(this)" aria-checked="false" role="radio" aria-label="Carrousel">
       <div class="obj-chk"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></div>
       <div class="obj-ico" style="background:#E6FAF3">
         <svg viewBox="0 0 26 26" fill="none"><rect x="7" y="3" width="12" height="20" rx="2" fill="#1A7A4A" opacity=".15" stroke="#1A7A4A" stroke-width="1.5"/><rect x="3" y="6" width="4" height="14" rx="1" fill="#1A7A4A" opacity=".3"/><rect x="19" y="6" width="4" height="14" rx="1" fill="#1A7A4A" opacity=".3"/><line x1="13" y1="7" x2="13" y2="19" stroke="#1A7A4A" stroke-width=".8" stroke-dasharray="1.5,1.5"/><path d="M16 21.5l1.5-1.5-1.5-1.5" stroke="#1A7A4A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
@@ -1133,7 +1131,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
 
 <div class="save-n" id="save-n">
   <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l3.5 3.5L12 3"/></svg>
-  Projet sauvegardé
+  <span id="save-n-msg">Projet sauvegardé</span>
 </div>
 
 <script>
@@ -1636,9 +1634,9 @@ function goTo(n){
   document.querySelectorAll('.stp').forEach(el=>{
     const s=+el.dataset.step;
     el.classList.remove('active','done','disabled');
-    if(s===n)el.classList.add('active');
-    else if(s<n)el.classList.add('done');
-    else el.classList.add('disabled');
+    if(s===n){el.classList.add('active');el.setAttribute('tabindex','0');}
+    else if(s<n){el.classList.add('done');el.setAttribute('tabindex','0');}
+    else{el.classList.add('disabled');el.setAttribute('tabindex','-1');}
   });
   if(n===3) setTimeout(initLayoutPicker,50);
   if(n===4) setTimeout(initCharte,50);
@@ -1652,8 +1650,8 @@ function goTo(n){
    STEP 1
 ════════════════════════════════════════════════ */
 function selObj(card){
-  document.querySelectorAll('.obj-card').forEach(c=>{c.classList.remove('sel');c.setAttribute('aria-pressed','false');});
-  card.classList.add('sel');card.setAttribute('aria-pressed','true');
+  document.querySelectorAll('.obj-card').forEach(c=>{c.classList.remove('sel');c.setAttribute('aria-checked','false');});
+  card.classList.add('sel');card.setAttribute('aria-checked','true');
   S.obj=card.dataset.obj;
   document.getElementById('btn1').disabled=false;
   renderFmt();
@@ -1850,8 +1848,10 @@ function autoSave(){
     catch(e){}
   },800);
 }
-function showNotif(){
+function showNotif(msg){
   const n=document.getElementById('save-n');
+  const m=document.getElementById('save-n-msg');
+  if(m)m.textContent=msg||'Projet sauvegardé';
   n.classList.add('show');
   setTimeout(()=>n.classList.remove('show'),2200);
 }
@@ -2446,7 +2446,12 @@ function renderCanvas(fmt,charte){
 
   /* SVG des blocs */
   let svgRects='';
+  /* Compute sy: same scaling as buildInfographieSVG so positions match exactly */
+  const _maxEnd=blocs.reduce((m,b)=>Math.max(m,b.y+b.h),0)||100;
+  const sy_rc=vbH/_maxEnd;
   blocs.forEach((b,i)=>{
+    /* Scale y coordinates to fill the viewBox */
+    const by_rc=b.y*sy_rc, bh_rc=b.h*sy_rc;
     const key='b'+i;
     const fc=BC[b.t]||'#EEE';
     const sc=BS[b.t]||'#999';
@@ -2457,49 +2462,61 @@ function renderCanvas(fmt,charte){
     const dashArr=b.req?'none':'3,2';
     const sw=b.req?.9:.6;
 
-    svgRects+=`<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="1.5" fill="${fc}" fill-opacity="${op}" stroke="${sc}" stroke-width="${sw}" stroke-dasharray="${dashArr}"/>`;
+    svgRects+=`<rect x="${b.x}" y="${by_rc.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" rx="1.5" fill="${fc}" fill-opacity="${op}" stroke="${sc}" stroke-width="${sw}" stroke-dasharray="${dashArr}"/>`;
 
     if(filled){
       const al=bc&&bc.align||{h:'center',v:'middle'};
-      const cx=al.h==='left'?b.x+b.w*.1:al.h==='right'?b.x+b.w*.9:b.x+b.w/2;
-      const cy=al.v==='top'?b.y+b.h*.15:al.v==='bottom'?b.y+b.h*.85:b.y+b.h/2;
+      const cx=al.h==='left'?b.x+b.w*.08:al.h==='right'?b.x+b.w*.92:b.x+b.w/2;
+      const cy=al.v==='top'?by_rc+bh_rc*.12:al.v==='bottom'?by_rc+bh_rc*.88:by_rc+bh_rc/2;
       if(bc.dvSvg){
         /* Embed graph SVG as base64 image inside the canvas preview */
         try{
           const b64=btoa(unescape(encodeURIComponent(bc.dvSvg)));
           const cid2='cdv'+i;
-          svgRects+=`<defs><clipPath id="${cid2}"><rect x="${b.x+.5}" y="${b.y+.5}" width="${b.w-1}" height="${b.h-1}" rx="1"/></clipPath></defs>`;
-          svgRects+=`<image href="data:image/svg+xml;base64,${b64}" x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" clip-path="url(#${cid2})" preserveAspectRatio="xMidYMid meet"/>`;
+          svgRects+=`<defs><clipPath id="${cid2}"><rect x="${b.x}" y="${by_rc.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" rx="1"/></clipPath></defs>`;
+          /* Alignment via physical offset of the graph image within the clipPath */
+          const _pad_g=Math.min(b.w,bh_rc)*.18;
+          const _ix=al.h==='left'?b.x+_pad_g:al.h==='right'?b.x-_pad_g:b.x;
+          const _iy=al.v==='top'?by_rc+_pad_g:al.v==='bottom'?by_rc-_pad_g:by_rc;
+          svgRects+=`<image href="data:image/svg+xml;base64,${b64}" x="${_ix.toFixed(2)}" y="${_iy.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" clip-path="url(#${cid2})" preserveAspectRatio="xMidYMid meet"/>`;
         }catch(e){
-          const fs=Math.min(3.5,b.h*.28,b.w*.09);
+          const fs=Math.min(3.5,bh_rc*.28,b.w*.09);
           svgRects+=`<text x="${cx}" y="${cy+1.2}" text-anchor="middle" dominant-baseline="central" font-family="system-ui,Arial,sans-serif" font-size="${fs}" fill="${sc}" font-weight="600">G ✓</text>`;
         }
       } else if(bc.icon){
         const ico=ICONS.find(x=>x.id===bc.icon);
         if(ico){
-          const sz=Math.min(b.h*.55,b.w*.25,8);
+          const szMap={XS:3,S:5,M:8,L:12,XL:16};
+          const szBase=szMap[bc.iconSize||'M']||8;
+          const sz=Math.min(bh_rc*.9,b.w*.9,szBase);
+          const clip_ico='cci'+i;
+          svgRects+=`<defs><clipPath id="${clip_ico}"><rect x="${b.x}" y="${by_rc.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" rx="1.5"/></clipPath></defs>`;
           const paths=ico.svg.match(/d="([^"]*)"/g)||[];
           const pd=paths.map(m=>m.slice(3,-1)).join(' ');
-          if(pd)svgRects+=`<g transform="translate(${cx-sz/2},${cy-sz/2}) scale(${sz/24})"><path stroke="${sc}" stroke-width="${24/sz*1.4}" fill="none" stroke-linecap="round" stroke-linejoin="round" d="${pd}"/></g>`;
+          /* clipPath on outer g (parent coords), transform on inner g (local 0-24 coords) */
+          if(pd)svgRects+=`<g clip-path="url(#${clip_ico})"><g transform="translate(${(cx-sz/2).toFixed(2)},${(cy-sz/2).toFixed(2)}) scale(${(sz/24).toFixed(3)})"><path stroke="${sc}" stroke-width="${(24/sz*1.4).toFixed(2)}" fill="none" stroke-linecap="round" stroke-linejoin="round" d="${pd}"/></g></g>`;
         }
       } else if(bc.text){
         /* Use bc.fs (pt) if set; otherwise auto-size based on bloc dimensions */
-        const autoFs=Math.min(3.5,b.h*.25,b.w*.07);
+        const autoFs=Math.min(3.5,bh_rc*.25,b.w*.07);
         /* Convert pt to viewBox units: viewBox is 0-100 wide ≈ page width in mm
            A4 = 210mm wide, viewBox 100 units → 1 unit ≈ 2.1mm ≈ 5.95pt
            So 1 viewBox unit ≈ 6pt → fs_vb = bc.fs/6 */
-        const fs=bc.fs?Math.min(bc.fs/6,b.h*.8):autoFs;
+        const fs=bc.fs?Math.min(bc.fs/6,bh_rc*.8):autoFs;
         const preview=bc.text.substring(0,28)+(bc.text.length>28?'…':'');
-        svgRects+=`<text x="${cx}" y="${cy+1.2}" text-anchor="${al.h='left'?'start':al.h==='right'?'end':'middle'}" dominant-baseline="central" font-family="system-ui,Arial,sans-serif" font-size="${fs.toFixed(1)}" fill="${sc}" font-weight="500">${escXml(preview)}</text>`;
+        const anch_t=al.h==='left'?'start':al.h==='right'?'end':'middle';
+        const clip_t='ct'+i;
+        svgRects+=`<defs><clipPath id="${clip_t}"><rect x="${b.x}" y="${by_rc.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" rx="1.5"/></clipPath></defs>`;
+        svgRects+=`<text x="${cx}" y="${cy+1.2}" text-anchor="${anch_t}" dominant-baseline="central" clip-path="url(#${clip_t})" font-family="system-ui,Arial,sans-serif" font-size="${fs.toFixed(1)}" fill="${sc}" font-weight="500">${escXml(preview)}</text>`;
       } else if(bc.img){
         /* Render the actual image in the canvas preview */
         const cid='ci'+i;
-        svgRects+=`<defs><clipPath id="${cid}"><rect x="${b.x+.2}" y="${b.y+.2}" width="${b.w-.4}" height="${b.h-.4}" rx="1.2"/></clipPath></defs>`;
-        svgRects+=`<image href="${bc.img}" x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${cid})"/>`;
+        svgRects+=`<defs><clipPath id="${cid}"><rect x="${b.x}" y="${by_rc.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" rx="1.2"/></clipPath></defs>`;
+        svgRects+=`<image href="${bc.img}" x="${b.x}" y="${by_rc.toFixed(2)}" width="${b.w}" height="${bh_rc.toFixed(2)}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${cid})"/>`;
       }
     } else {
-      const fs=Math.min(3.2,b.h*.28,b.w*.09);
-      if(fs>1.0)svgRects+=`<text x="${b.x+b.w/2}" y="${b.y+b.h/2+1.2}" text-anchor="middle" dominant-baseline="central" font-family="system-ui,Arial,sans-serif" font-size="${fs.toFixed(1)}" fill="${sc}" font-weight="500">${lbl}</text>`;
+      const fs=Math.min(3.2,bh_rc*.28,b.w*.09);
+      if(fs>1.0)svgRects+=`<text x="${b.x+b.w/2}" y="${(by_rc+bh_rc/2+1.2).toFixed(2)}" text-anchor="middle" dominant-baseline="central" font-family="system-ui,Arial,sans-serif" font-size="${fs.toFixed(1)}" fill="${sc}" font-weight="500">${lbl}</text>`;
     }
   });
 
@@ -2514,7 +2531,7 @@ function renderCanvas(fmt,charte){
 
   /* Overlays cliquables — positionnés en % via scale */
   const scaleX=dispW/100;
-  const scaleY=dispH/vbH;
+  const scaleY=dispH/_maxEnd;  /* match sy_rc: dispH/_maxEnd not dispH/vbH */
 
   blocs.forEach((b,i)=>{
     if(b.t==='Réservée')return;
@@ -2587,6 +2604,25 @@ function renderFillEmpty(){
 }
 
 /* ── Panneau de remplissage — tout passe par l'INDEX ── */
+
+function getAlignHTML(idx,bc){
+  const al=(bc&&bc.align)||{h:'center',v:'middle'};
+  const L='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="4" x2="12" y2="4"/><line x1="2" y1="7" x2="9" y2="7"/><line x1="2" y1="10" x2="11" y2="10"/><line x1="2" y1="2" x2="2" y2="12"/></svg>';
+  const C='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="4" x2="11" y2="4"/><line x1="2" y1="7" x2="12" y2="7"/><line x1="3" y1="10" x2="11" y2="10"/><line x1="7" y1="1" x2="7" y2="13"/></svg>';
+  const R='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="4" x2="12" y2="4"/><line x1="5" y1="7" x2="12" y2="7"/><line x1="3" y1="10" x2="12" y2="10"/><line x1="12" y1="2" x2="12" y2="12"/></svg>';
+  const T='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="3" x2="4" y2="11"/><line x1="7" y1="3" x2="7" y2="8"/><line x1="10" y1="3" x2="10" y2="10"/><line x1="2" y1="2" x2="12" y2="2"/></svg>';
+  const M='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="3" x2="4" y2="11"/><line x1="7" y1="1" x2="7" y2="13"/><line x1="10" y1="3" x2="10" y2="11"/><line x1="2" y1="7" x2="12" y2="7"/></svg>';
+  const B='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="3" x2="4" y2="11"/><line x1="7" y1="6" x2="7" y2="11"/><line x1="10" y1="4" x2="10" y2="11"/><line x1="2" y1="12" x2="12" y2="12"/></svg>';
+  function ab(icon,axis,val,cur){return '<button class="align-btn'+(cur===val?' act':'')+'" onclick="updateAlign('+idx+',\''+axis+'\',\''+val+'\')" title="'+{left:'Gauche',center:'Centre',right:'Droite',top:'Haut',middle:'Milieu',bottom:'Bas'}[val]+'">'+icon+'</button>';}
+  return '<div class="align-panel">'
+    +'<div class="align-group"><div class="align-group-lbl">Position H</div><div class="align-btns">'
+    +ab(L,'h','left',al.h)+ab(C,'h','center',al.h||'center')+ab(R,'h','right',al.h)
+    +'</div></div>'
+    +'<div class="align-group"><div class="align-group-lbl">Position V</div><div class="align-btns">'
+    +ab(T,'v','top',al.v)+ab(M,'v','middle',al.v||'middle')+ab(B,'v','bottom',al.v)
+    +'</div></div></div>';
+}
+
 function updateAlign(idx,axis,val){
   const c=getContent();const key='b'+idx;
   if(!c[key])c[key]={};
@@ -2595,7 +2631,8 @@ function updateAlign(idx,axis,val){
   const fmt=getActiveFmt();
   if(fmt&&S.charte)renderCanvas(fmt,S.charte);
   const b=fmt&&getActiveBlocs(fmt)[idx];
-  if(b)renderFillPanel(idx,b.t,b.req);
+  /* Preserve current tab by passing activeTab as type hint */
+  if(b)renderFillPanel(idx,activeTab||b.t,b.req);
   autoSave();
 }
 
@@ -2608,22 +2645,19 @@ function renderFillPanel(idx,type,req){
   const key='b'+idx;
   const bc=content[key]||{};
 
-  const tabMap={
-    /* Types courts (nouveaux) */
-    'T':['T'], 'I':['I'], 'T/I':['T','I'], 'D':['D'],
-    /* Types longs (legacy) */
-    'Texte':['T'], 'Image':['I'],
-    'Texte ou image':['T','I'],
-    'Texte ou graphique':['T','D'],
-    'Texte / image / graphique':['T','I','D'],
-    'Graphique':['D'],
-  };
-  const tabs=tabMap[type]||['T'];
-  /* Respect activeTab set by switchTab if valid; otherwise infer from content */
-  if(!tabs.includes(activeTab)){
-    if(bc.text&&tabs.includes('T'))activeTab='T';
-    else if((bc.img||bc.icon)&&tabs.includes('I'))activeTab='I';
-    else activeTab=tabs[0];
+  /* Content blocs always show T+I+D; reserved/structural blocs keep one tab */
+  const CONTENT_TYPES=['T','I','T/I','D','Texte','Image','Texte ou image','Texte ou graphique','Texte / image / graphique','Graphique'];
+  const isContent=CONTENT_TYPES.includes(b.t);
+  const tabs=isContent?['T','I','D']:['T'];
+
+  /* Set active tab: respect explicit switchTab choice, otherwise infer from content */
+  const validTab=tabs.includes(activeTab)?activeTab:null;
+  if(!validTab){
+    /* `type` param hints: 'T/I'→T, 'D'→D, else infer from bc */
+    if(type==='D'||b.t==='D') activeTab=bc.dvSvg?'D':bc.img||bc.icon?'I':'T';
+    else if(bc.dvSvg&&!bc.text&&!bc.img&&!bc.icon) activeTab='D';
+    else if((bc.img||bc.icon)&&!bc.text) activeTab='I';
+    else activeTab='T';
   }
 
   const tabLabels={T:'Texte',I:'Image / Icône',D:'Graphique'};
@@ -2670,7 +2704,16 @@ function renderFillPanel(idx,type,req){
         <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M1 1l8 8M9 1L1 9"/></svg>
       </div>
     </div>`:'';
-    const iconSel=bc.icon?`<div style="font-size:11px;color:var(--green);margin-bottom:8px;font-weight:600;padding:6px 10px;background:var(--green-l);border-radius:8px">Icône sélectionnée : ${bc.icon} — <span style="cursor:pointer;text-decoration:underline" onclick="clearIcon(${idx})">retirer</span></div>`:'';
+    const iconSel=bc.icon?`<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:6px 10px;background:var(--green-l);border-radius:8px;flex-wrap:wrap">
+  <span style="font-size:11px;color:var(--green);font-weight:600;flex:1;min-width:80px">Icône : ${bc.icon}</span>
+  <span style="cursor:pointer;font-size:11px;color:var(--green);text-decoration:underline" onclick="clearIcon(${idx})">retirer</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+  <label style="font-size:12px;color:var(--text2);white-space:nowrap">Taille :</label>
+  <div style="display:flex;gap:3px">
+    ${['XS','S','M','L','XL'].map(s=>`<button style="padding:3px 7px;font-size:11px;font-weight:600;border-radius:5px;border:.5px solid var(--border);background:${(bc.iconSize||'M')===s?'var(--blue)':'var(--bg)'};color:${(bc.iconSize||'M')===s?'#fff':'var(--text2)'};cursor:pointer" onclick="updateIconSize(${idx},'${s}')">${s}</button>`).join('')}
+  </div>
+</div>`:''
     panelContent=`
       ${imgPreview}${iconSel}
       ${!bc.img?`<div class="fill-img-drop" id="img-drop-${idx}">
@@ -2694,25 +2737,8 @@ function renderFillPanel(idx,type,req){
       ${req?'<span class="badge bdg-b">obligatoire</span>':'<span style="font-size:11px;color:var(--text3)">optionnel</span>'}
     </div>
     ${b.note?`<div style="font-size:12px;color:var(--text2);margin-bottom:10px;padding:6px 10px;background:var(--bg2);border-radius:8px;line-height:1.5">💡 ${b.note}</div>`:''}
-    <div class="align-panel">
-      <div class="align-group">
-        <div class="align-group-lbl">Horizontal</div>
-        <div class="align-btns">
-          <button class="align-btn${(!bc.align||bc.align.h==='left')?' act':''}" onclick="updateAlign(${idx},'h','left')" title="Aligner à gauche"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="4" x2="12" y2="4"/><line x1="2" y1="7" x2="9" y2="7"/><line x1="2" y1="10" x2="11" y2="10"/><line x1="2" y1="2" x2="2" y2="12"/></svg></button>
-          <button class="align-btn${(bc.align&&bc.align.h==='center')?' act':''}" onclick="updateAlign(${idx},'h','center')" title="Centrer"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="4" x2="11" y2="4"/><line x1="2" y1="7" x2="12" y2="7"/><line x1="3" y1="10" x2="11" y2="10"/><line x1="7" y1="1" x2="7" y2="13"/></svg></button>
-          <button class="align-btn${(bc.align&&bc.align.h==='right')?' act':''}" onclick="updateAlign(${idx},'h','right')" title="Aligner à droite"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="4" x2="12" y2="4"/><line x1="5" y1="7" x2="12" y2="7"/><line x1="3" y1="10" x2="12" y2="10"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button>
-        </div>
-      </div>
-      <div class="align-group">
-        <div class="align-group-lbl">Vertical</div>
-        <div class="align-btns">
-          <button class="align-btn${(bc.align&&bc.align.v==='top')?' act':''}" onclick="updateAlign(${idx},'v','top')" title="Aligner en haut"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="3" x2="4" y2="11"/><line x1="7" y1="3" x2="7" y2="8"/><line x1="10" y1="3" x2="10" y2="10"/><line x1="2" y1="2" x2="12" y2="2"/></svg></button>
-          <button class="align-btn${(!bc.align||bc.align.v==='middle')?' act':''}" onclick="updateAlign(${idx},'v','middle')" title="Centrer verticalement"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="3" x2="4" y2="11"/><line x1="7" y1="1" x2="7" y2="13"/><line x1="10" y1="3" x2="10" y2="11"/><line x1="2" y1="7" x2="12" y2="7"/></svg></button>
-          <button class="align-btn${(bc.align&&bc.align.v==='bottom')?' act':''}" onclick="updateAlign(${idx},'v','bottom')" title="Aligner en bas"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="3" x2="4" y2="11"/><line x1="7" y1="6" x2="7" y2="11"/><line x1="10" y1="4" x2="10" y2="11"/><line x1="2" y1="12" x2="12" y2="12"/></svg></button>
-        </div>
-      </div>
-    </div>
-    ${tabsHTML}${panelContent}${reqAlert}`;
+    ${getAlignHTML(idx,bc)}
+        ${tabsHTML}${panelContent}${reqAlert}`;
 
   /* Attacher les events APRÈS injection HTML */
   if(activeTab==='I'&&!bc.img){
@@ -2737,6 +2763,17 @@ function switchTab(tab,idx,type,req){
 }
 
 /* ── Texte ── */
+function updateIconSize(idx,sz){
+  const c=getContent();const key='b'+idx;
+  if(!c[key])c[key]={};
+  c[key].iconSize=sz;
+  const fmt=getActiveFmt();
+  if(fmt&&S.charte)renderCanvas(fmt,S.charte);
+  const b=fmt&&getActiveBlocs(fmt)[idx];
+  if(b)renderFillPanel(idx,activeTab||b.t,b.req);
+  autoSave();
+}
+
 function updateFontSize(idx,val){
   const c=getContent();const key='b'+idx;
   if(!c[key])c[key]={};
@@ -2745,14 +2782,14 @@ function updateFontSize(idx,val){
   const fmt=getActiveFmt();
   if(fmt&&S.charte)renderCanvas(fmt,S.charte);
   const b=fmt&&getActiveBlocs(fmt)[idx];
-  if(b)renderFillPanel(idx,b.t,b.req);
+  if(b)renderFillPanel(idx,activeTab||b.t,b.req);
   autoSave();
 }
 
 function updateText(idx,ta){
   const c=getContent();const key='b'+idx;
   if(!c[key])c[key]={};
-  c[key].text=ta.value; /* keep img/icon — text+image can coexist */
+  c[key].text=ta.value;c[key].dvSvg=null;c[key].dv=null; /* keep img/icon; clear graph */
   const words=ta.value.trim().split(/\s+/).filter(Boolean).length;
   ta.className='fill-textarea'+(words>40?' err':words>30?' warn':'');
   const fmt=getActiveFmt();
@@ -2769,7 +2806,7 @@ function importImg(idx,e){
   reader.onload=ev=>{
     const c=getContent();const key='b'+idx;
     if(!c[key])c[key]={};
-    c[key].img=ev.target.result;c[key].icon=null; /* keep text — text+image can coexist */
+    c[key].img=ev.target.result;c[key].icon=null;c[key].dvSvg=null;c[key].dv=null; /* keep text; clear graph */
     const fmt=getActiveFmt();
     if(fmt&&S.charte){renderCanvas(fmt,S.charte);renderBlocList(fmt);}
     const b=fmt&&getActiveBlocs(fmt)[idx];
@@ -2828,7 +2865,7 @@ function iconSearch(q,idx){
 function selectIcon(idx,iconId){
   const c=getContent();const key='b'+idx;
   if(!c[key])c[key]={};
-  c[key].icon=iconId;c[key].img=null; /* keep text */
+  c[key].icon=iconId;c[key].img=null;c[key].dvSvg=null;c[key].dv=null; /* keep text; clear graph */
   document.querySelectorAll('.icon-btn-card').forEach(el=>el.classList.toggle('sel-icon',el.dataset.id===iconId));
   const fmt=getActiveFmt();
   if(fmt&&S.charte){renderCanvas(fmt,S.charte);renderBlocList(fmt);}
@@ -3063,7 +3100,7 @@ function applyScore(pass, total){
 }
 
 /* ── Générateur SVG de l'infographie ── */
-function buildInfographieSVG(scale){
+function buildInfographieSVG(scale, showBorders){
   const fmt=getActiveFmt();
   if(!fmt) return null;
   const charte=S.charte||{neutral:'#F4F3EF',main:'#185FA5',accent:'#BA7517'};
@@ -3097,11 +3134,16 @@ function buildInfographieSVG(scale){
     const sc2=SCe[b.t]||charte.main;
     const bc=content['b'+i];
     const filled=bc&&(bc.text||bc.img||bc.icon||bc.dvSvg);
-    const dashArr=b.req?'none':'5,3';
-    const sw=b.req?.8:.5;
-
     const by_=b.y*sy,bh_=b.h*sy;
-    inner+=`<rect x="${b.x}" y="${by_.toFixed(2)}" width="${b.w}" height="${bh_.toFixed(2)}" rx="1.5" fill="${fc}" stroke="${sc2}" stroke-width="${sw}" stroke-dasharray="${dashArr}"/>`;
+    /* Borders only when showBorders is true */
+    if(showBorders){
+      const dashArr=b.req?'none':'5,3';
+      const sw=b.req?.8:.5;
+      inner+=`<rect x="${b.x}" y="${by_.toFixed(2)}" width="${b.w}" height="${bh_.toFixed(2)}" rx="1.5" fill="${fc}" stroke="${sc2}" stroke-width="${sw}" stroke-dasharray="${dashArr}"/>`;
+    } else if(!filled){
+      /* Transparent placeholder for empty blocs — no stroke, subtle fill */
+      inner+=`<rect x="${b.x}" y="${by_.toFixed(2)}" width="${b.w}" height="${bh_.toFixed(2)}" rx="1.5" fill="none"/>`;
+    }
 
     if(filled){
       const al_e=bc.align||{h:'center',v:'middle'};
@@ -3115,11 +3157,15 @@ function buildInfographieSVG(scale){
       } else if(bc.icon){
         const ico=ICONS.find(x=>x.id===bc.icon);
         if(ico){
-          const sz=Math.min(b.h*.55,b.w*.3,12);
+          const szMapE={XS:3,S:5,M:8,L:12,XL:16};
+          const szBase_=szMapE[bc.iconSize||'M']||8;
+          const sz=Math.min(bh_*.9,b.w*.9,szBase_);
+          const clip_ico_='cie'+i;
+          defs+=`<clipPath id="${clip_ico_}"><rect x="${b.x}" y="${by_.toFixed(2)}" width="${b.w}" height="${bh_.toFixed(2)}" rx="1.5"/></clipPath>`;
           const paths=ico.svg.match(/d="([^"]*)"/g)||[];
-          inner+=`<g transform="translate(${(cx-sz/2).toFixed(2)},${(cy-sz/2).toFixed(2)}) scale(${(sz/24).toFixed(3)})" stroke="${sc2}" stroke-width="${(24/sz*1.4).toFixed(2)}" fill="none" stroke-linecap="round" stroke-linejoin="round">`;
+          inner+=`<g clip-path="url(#${clip_ico_})"><g transform="translate(${(cx-sz/2).toFixed(2)},${(cy-sz/2).toFixed(2)}) scale(${(sz/24).toFixed(3)})" stroke="${sc2}" stroke-width="${(24/sz*1.4).toFixed(2)}" fill="none" stroke-linecap="round" stroke-linejoin="round">`;
           paths.forEach(p=>inner+=`<path d="${p.slice(3,-1)}"/>`);
-          inner+='</g>';
+          inner+='</g></g>';
         }
       } else if(bc.text){
         const autoFsE=Math.min(b.h*.22,b.w*.06,4.5);
@@ -3132,15 +3178,25 @@ function buildInfographieSVG(scale){
         if(cur)lines.push(cur.trim());
         const nLines=Math.min(lines.length,Math.floor(b.h/lineH));
         const textH=nLines*lineH;
-        const cy_=al_.v==='top'?by_+bh_*.1+textH/2:al_.v==='bottom'?by_+bh_*.9-textH/2:by_+bh_/2;
+        const cy_=al_e.v==='top'?by_+bh_*.1+textH/2:al_e.v==='bottom'?by_+bh_*.9-textH/2:by_+bh_/2;
         const startY=cy_-textH/2+fs*.8;
         lines.slice(0,nLines).forEach((l,li)=>{
-          inner+=`<text x="${cx_.toFixed(2)}" y="${(startY+li*lineH).toFixed(2)}" text-anchor="${anch_}" font-family="system-ui,Arial,sans-serif" font-size="${fs.toFixed(2)}" fill="${sc2}" font-weight="${i===0?'700':'400'}">${escXml(l)}</text>`;
+          inner+=`<text x="${cx.toFixed(2)}" y="${(startY+li*lineH).toFixed(2)}" text-anchor="${anch_e}" font-family="system-ui,Arial,sans-serif" font-size="${fs.toFixed(2)}" fill="${sc2}" font-weight="${i===0?'700':'400'}">${escXml(l)}</text>`;
         });
       } else if(bc.dvSvg){
-        /* Graphique : on insère le SVG inline via foreignObject ou on affiche un label */
-        const fs=Math.min(b.h*.2,b.w*.07,3.5);
-        inner+=`<text x="${cx}" y="${cy+1}" text-anchor="middle" dominant-baseline="central" font-family="system-ui,Arial,sans-serif" font-size="${fs}" fill="${sc2}" font-weight="600">Graphique</text>`;
+        try{
+          const b64dv=btoa(unescape(encodeURIComponent(bc.dvSvg)));
+          const dcid='dvc'+i;
+          defs+=`<clipPath id="${dcid}"><rect x="${b.x+.2}" y="${by_+.2}" width="${b.w-.4}" height="${bh_-.4}" rx="1.2"/></clipPath>`;
+          const _pad_g2=Math.min(b.w,bh_)*.18;
+          const _ix2=al_e.h==='left'?b.x+_pad_g2:al_e.h==='right'?b.x-_pad_g2:b.x;
+          const _iy2=al_e.v==='top'?by_+_pad_g2:al_e.v==='bottom'?by_-_pad_g2:by_;
+          inner+=`<image href="data:image/svg+xml;base64,${b64dv}" x="${_ix2.toFixed(2)}" y="${_iy2.toFixed(2)}" width="${b.w}" height="${bh_.toFixed(2)}" clip-path="url(#${dcid})" preserveAspectRatio="xMidYMid meet"/>`;
+        }catch(e){
+          const cx_=b.x+b.w/2, cy_=by_+bh_/2;
+          const fs=Math.min(b.h*.2,b.w*.07,3.5);
+          inner+=`<text x="${cx_}" y="${cy_+1}" text-anchor="middle" dominant-baseline="central" font-family="system-ui,Arial,sans-serif" font-size="${fs}" fill="${sc2}" font-weight="600">G</text>`;
+        }
       }
     } else if(b.t!=='Réservée'){
       const lbl=BL[b.t]||'?';
@@ -3165,8 +3221,19 @@ function buildInfographieSVG(scale){
 function renderExportPreview(){
   const el=document.getElementById('exp-preview');
   if(!el)return;
-  const svg=buildInfographieSVG(.25);
-  if(svg)el.innerHTML=svg;
+  const svg=buildInfographieSVG(.5, true);
+  if(!svg){el.innerHTML='<div style="color:var(--text3);font-size:12px;text-align:center;padding:20px">Aper\u00e7u indisponible. Configurez les \u00e9tapes 1\u20134.</div>';return;}
+  /* Use <img> not innerHTML — avoids CSP blocks on embedded data: URIs */
+  const dataUrl=_svgToDataUrl(svg);
+  el.innerHTML='';
+  const img=document.createElement('img');
+  img.src=dataUrl;
+  img.style.cssText='width:100%;height:auto;border-radius:6px;display:block';
+  img.onerror=()=>{
+    /* Fallback: try inline SVG */
+    try{el.innerHTML=svg;}catch(e){}
+  };
+  el.appendChild(img);
 }
 
 /* ── Export PNG via Canvas ── */
@@ -3193,23 +3260,46 @@ function _svgToCanvas(svg, scale, onSuccess, onFail){
   img.src=_svgToDataUrl(svg);
 }
 
+function _confirmExportBorders(onConfirm){
+  /* Create inline modal asking about borders */
+  const existing=document.getElementById('__export_modal');
+  if(existing)existing.remove();
+  const modal=document.createElement('div');
+  modal.id='__export_modal';
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;display:flex;align-items:center;justify-content:center';
+  modal.innerHTML=`<div style="background:var(--bg);border-radius:16px;padding:24px 28px;max-width:360px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,.25);font-family:system-ui,Arial,sans-serif">
+    <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">Cadres de blocs</div>
+    <div style="font-size:13px;color:var(--text2);margin-bottom:20px;line-height:1.5">Voulez-vous inclure les cadres de blocs dans l'export ? (utiles pour vérifier la mise en page, à retirer pour la version finale)</div>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button id="__exp_yes" style="padding:8px 16px;border-radius:8px;border:.5px solid var(--border);background:var(--bg2);font-size:13px;font-weight:500;cursor:pointer;color:var(--text)">Garder les cadres</button>
+      <button id="__exp_no" style="padding:8px 16px;border-radius:8px;border:none;background:var(--blue);font-size:13px;font-weight:600;cursor:pointer;color:#fff">Sans cadres ✓</button>
+    </div>
+  </div>`;
+  document.body.appendChild(modal);
+  modal.querySelector('#__exp_yes').onclick=()=>{modal.remove();onConfirm(true);};
+  modal.querySelector('#__exp_no').onclick=()=>{modal.remove();onConfirm(false);};
+  modal.onclick=(e)=>{if(e.target===modal){modal.remove();}};
+}
+
 function exportPNG(){
-  const svg=buildInfographieSVG(2);
-  if(!svg){alert('Veuillez d\'abord choisir un format (étape 2) et définir une charte (étape 3).');return;}
-  const fmt=getActiveFmt();
-  _svgToCanvas(svg, 2,
-    (canvas)=>{
-      try{
-        canvas.toBlob(pngBlob=>{
-          if(!pngBlob){_triggerDownload(svg,'image/svg+xml',fmt,'svg');return;}
-          _triggerDownload(URL.createObjectURL(pngBlob),'_blob',fmt,'png');
-        },'image/png');
-      }catch(e){
-        _triggerDownload(svg,'image/svg+xml',fmt,'svg');
-      }
-    },
-    ()=>_triggerDownload(svg,'image/svg+xml',fmt,'svg')
-  );
+  _confirmExportBorders((borders)=>{
+    const svg=buildInfographieSVG(2, borders);
+    if(!svg){alert('Veuillez d\'abord choisir un format (étape 2) et définir une charte (étape 3).');return;}
+    const fmt=getActiveFmt();
+    _svgToCanvas(svg, 2,
+      (canvas)=>{
+        try{
+          canvas.toBlob(pngBlob=>{
+            if(!pngBlob){_triggerDownload(svg,'image/svg+xml',fmt,'svg');return;}
+            _triggerDownload(URL.createObjectURL(pngBlob),'_blob',fmt,'png');
+          },'image/png');
+        }catch(e){
+          _triggerDownload(svg,'image/svg+xml',fmt,'svg');
+        }
+      },
+      ()=>_triggerDownload(svg,'image/svg+xml',fmt,'svg')
+    );
+  });
 }
 
 function _triggerDownload(data,type,fmt,ext){
@@ -3225,23 +3315,26 @@ function _triggerDownload(data,type,fmt,ext){
   setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},1000);
 }
 
+
 /* ── Export SVG ── */
 function exportSVG(){
-  const svg=buildInfographieSVG(1);
-  if(!svg){alert('Veuillez d\'abord configurer votre infographie.');return;}
-  const fmt=getActiveFmt();
-  const a=document.createElement('a');
-  _triggerDownload(svg,'image/svg+xml',fmt,'svg');
+  _confirmExportBorders((borders)=>{
+    const svg=buildInfographieSVG(1, borders);
+    if(!svg){alert('Veuillez d\'abord configurer votre infographie.');return;}
+    const fmt=getActiveFmt();
+    _triggerDownload(svg,'image/svg+xml',fmt,'svg');
+  });
 }
 
 /* ── Export HTML autonome ── */
 function exportHTML(){
-  const svg=buildInfographieSVG(1);
-  if(!svg){alert('Veuillez d\'abord configurer votre infographie.');return;}
-  const fmt=getActiveFmt();
-  const charte=S.charte||{};
-  const title=(fmt?fmt.name:'Infographie')+' — Guidegraph';
-  const html=`<!DOCTYPE html>
+  _confirmExportBorders((borders)=>{
+    const svg=buildInfographieSVG(1, borders);
+    if(!svg){alert('Veuillez d\'abord configurer votre infographie.');return;}
+    const fmt=getActiveFmt();
+    const charte=S.charte||{};
+    const title=(fmt?fmt.name:'Infographie')+' — Guidegraph';
+    const html=`<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -3251,13 +3344,13 @@ function exportHTML(){
 </head>
 <body>
 <div class="wrap">
-${svg}
-<footer>Créé avec Guidegraph · CC BY 4.0 · Bertrand Formet · ${new Date().toLocaleDateString('fr-FR')}</footer>
+\${svg}
+<footer>Créé avec Guidegraph · CC BY 4.0 · Bertrand Formet · \${new Date().toLocaleDateString('fr-FR')}</footer>
 </div>
 </body>
 </html>`;
-  const a=document.createElement('a');
-  _triggerDownload(html,'text/html',fmt,'html');
+    _triggerDownload(html,'text/html',fmt,'html');
+  });
 }
 
 /* ════════════════════════════════════════════════
@@ -3266,9 +3359,10 @@ ${svg}
 
 /* ── Export PDF via SVG → Canvas → PDF maison ── */
 function _exportPDFCore(){
+  _confirmExportBorders((borders)=>{
   const fmt=getActiveFmt();
   if(!fmt){alert("Choisissez d'abord un format (étape 2).");return;}
-  const svg=buildInfographieSVG(2);
+  const svg=buildInfographieSVG(2, borders);
   if(!svg)return;
 
   /* Open the target window SYNCHRONOUSLY (from click handler → no popup block)
@@ -3314,6 +3408,7 @@ function _exportPDFCore(){
     },
     ()=>{ win.close(); _triggerDownload(svg,'image/svg+xml',fmt,'svg'); }
   );
+  });
 }
 
 function _exportPDFAsDownload(fmt,svg){
@@ -3342,7 +3437,6 @@ function _exportPDFAsDownload(fmt,svg){
 function loadJsPDFAndExport(){
   _exportPDFCore();
 }
-
 function exportPDF(){loadJsPDFAndExport();}
 
 /* ════════════════════════════════════════════════
@@ -3361,7 +3455,7 @@ function renderDatavizPanel(idx,req,forceType){
   if(!b)return;
   const content=getContent();
   const key='b'+idx;
-  const bc=content[key];
+  const bc=content[key]||{};
   /* Réinitialiser l'état si on change de bloc */
   if(dvCurrentIdx!==idx){
     dvCurrentIdx=idx;
@@ -3397,9 +3491,10 @@ function renderDatavizPanel(idx,req,forceType){
       <div class="fill-bloc-name">${b.z}</div>
       ${req?'<span class="badge bdg-b">obligatoire</span>':'<span style="font-size:11px;color:var(--text3)">optionnel</span>'}
     </div>
+    ${getAlignHTML(idx,bc)}
     <div class="fill-type-tabs">
-      <button class="ftype-tab" onclick="switchTab('T',${idx},'${b.t}',${req})">Texte</button>
-      <button class="ftype-tab" onclick="switchTab('I',${idx},'${b.t}',${req})">Image</button>
+      <button class="ftype-tab" onclick="switchTab('T',${idx},'T/I',${req})">Texte</button>
+      <button class="ftype-tab" onclick="switchTab('I',${idx},'T/I',${req})">Image</button>
       <button class="ftype-tab act">Graphique</button>
     </div>
     <div class="dv-editor">
@@ -3554,7 +3649,9 @@ function saveDv(idx,req){
   c[key].text=null;c[key].img=null;c[key].icon=null;
   /* Générer SVG du graphique pour l'embed dans l'aperçu */
   const charte=S.charte||{main:'#185FA5',accent:'#BA7517',neutral:'#F4F3EF'};
-  c[key].dvSvg=buildDvSVG(dvState,400,240,charte);
+  const rawSvg=buildDvSVG(dvState,400,240,charte);
+  /* Remove explicit width/height so <image preserveAspectRatio> controls scaling */
+  c[key].dvSvg=rawSvg.replace(/^<svg width="\d+" height="\d+"/, '<svg');
   const fmt=getActiveFmt();
   if(fmt&&S.charte){renderCanvas(fmt,S.charte);renderBlocList(fmt);}
   /* Retour au panneau */
